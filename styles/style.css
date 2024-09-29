@@ -367,9 +367,16 @@
 
 dialog {
   display: grid;
+  gap: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto 1fr;
   transition: opacity 0.3s ease-in-out;
+  inline-size: 350px;
+  block-size: 191px;
+  padding: 30px 42px;
+  background-color: var(--background-color);
 }
 
 dialog:not([open]) {
@@ -380,24 +387,28 @@ opacity: 0;
 dialog::backdrop {
   background-color: var(--background-image);
   backdrop-filter: blur(7px);
+  opacity: 1;
 }
 
 .dialog-text {
   color: var(--text-color);
-  text-transform: uppercase;
   line-height: 150%;
-  grid-column: -1 / 1;
 }
 
 .close-button {
   color: var(--text-color);
+  font-family: var(--main-font-family);
+  font-size: 14px;
   text-transform: uppercase;
   line-height: 90%;
   outline: none;
   border: 2px solid var(--text-color);
+  grid-column: -1 / 1;
+  height: 38px;
+  background-color: var(--background-color);
 }
 
-.submit-button:focus {
+.close-button:focus {
   outline: none;
 }
 
@@ -434,6 +445,10 @@ dialog::backdrop {
 
   .watermark {
     inset-inline-end: clamp(0.813rem, 0.548rem + 1.127vw, 1.563rem);
+  }
+
+  dialog {
+    padding: 30px;
   }
 
 }
