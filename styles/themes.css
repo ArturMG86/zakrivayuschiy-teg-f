@@ -4,3 +4,63 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+  --post-title-font-weight: 700;
+  --post-text-font-weight: 400;
+  --background-color: #fff;
+  --text-color: #000;
+  --border-color: #000;
+  --background-image: 
+      repeating-linear-gradient(
+        to right, 
+        #d3d3d3 0 2px, 
+        transparent 2px 4px), 
+      repeating-linear-gradient(
+        to bottom, 
+        #e7e7e7 0.01% 2px, 
+        #1a1a1a 2px 4px);
+  --text-shadow: #fff;
+  --name: #000;
+}
+
+:root.theme-dark {
+  --post-title-font-weight: 785;
+  --post-text-font-weight: 465;
+  --background-color: #000;
+  --text-color: #00cc14;
+  --border-color: #00cc14;
+  --background-image: 
+      repeating-linear-gradient(
+        to right, 
+        #000 0 2px, 
+        transparent 2px 4px), 
+      repeating-linear-gradient(
+        to bottom, 
+        #007f0c 0 2px, 
+        #004306 2px 4px);
+  --text-shadow: #000;
+  --name: #00cc14;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      /* Значения для пользовательского предпочтения тёмной темы */
+      --post-title-font-weight: 785;
+      --post-text-font-weight: 465;
+      --background-color: #000;
+      --text-color: #00cc14;
+      --border-color: #00cc14;
+      --background-image: 
+          repeating-linear-gradient(
+            to right, 
+            #000 0 2px, 
+            transparent 2px 4px), 
+            repeating-linear-gradient(
+              to bottom, 
+              #007f0c 0 2px, 
+              #004306 2px 4px);
+      --text-shadow: #000;
+      --name: #00cc14;
+    }
+  }
